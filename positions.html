@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="styles-properties.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <title>CCS for Starters</title>
+</head>
+<body>
+         <!-- Responsive navbar-->
+         <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a class="sideLinks" href="index.html">All Properties</a>
+            <a href="#position">position</a>
+            <a href="#right">right</a>
+            <a href="#left">left</a>
+            <a href="#top">top</a>
+            <a href="#bottom">bottom</a>
+          </div>
+      
+    <header class="bg-white py-5">
+        <div class="container px-5">
+            <div id="main">
+                
+        </div> 
+
+
+        <h1 class="h1 fw-bolder text-lg-start">Position</h1>
+        <p class="header-content">The positioning mechanism used for an element is specified by the position property 
+        <strong>(static, relative, absolute, fixed, or sticky).</strong>
+        </p>
+
+        <!-- position section -->
+
+        <div id="position">
+        <section id="color-section" class="container-property"> 
+            <h3 class="h3 fw-bolder">position</h3>
+            <p>Defines the position behavior of the element.
+            </p>
+        </div>
+            <!-- static -->
+
+            <section class="color-sample"> <!-- parent -->
+                <header class="content-header"> <!--second-->
+                    <p class="red"><code class="sample-value" data-tooltip="click to copy"
+                        data-clipboard-text="color:#181818">
+                        position: static; </code>
+                    </p>
+                    <div class="sample-description">
+                        <p> The element will remain <strong>natural flow</strong> </p>
+                        <p>
+                            As a result it will <i>not </i> act as an anchor point 
+                            for the absolutely positioned Child1 element.
+                        </p>
+                    </div>
+                </header>
+                <aside class="sample-preview">
+                    <div class="sample-browser">
+                        <i>.</i>
+                        <i>.</i>
+                        <i>.</i>
+                    </div>
+                    <div class="sample-output">
+                        <div class="position-div1">
+                            <p>Deafult position </p>
+                            <!-- <div class="position-child1">
+                                <p> Sample text absolute Child1</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+<!-- relative -->
+    
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            position: relative; </code>
+        </p>
+        <div class="sample-description">
+            <p> The element will remain <strong>natural flow</strong>
+                It also makes the element <strong>positioned</strong> Will act
+                as an achor point for the absolutely positined block.
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-relative">
+                <p>Default Position</p>
+                <div class="position-child-absolute">
+                    <p> Relative Position</p>
+                </div>
+            </div>
+        </div>
+     </aside>
+    </section>
+
+<!-- absolute -->
+
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            position: absolute; </code>
+        </p>
+        <div class="sample-description">
+            <p> The element will <strong>not </strong> remain in the 
+                natural flow of the page. It will positione itself to the <strong>closest
+                ancestor or parent</strong>. </br>
+                It is <strong>positioned</strong>, so it will serve as an anchor point for the border red, 
+                which is also precisely positioned.
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-output-div position" id="position-absolute">
+                <!-- <p>sample text</p> -->
+                <div class="primary-text">
+                    Default Position
+                <div class="secondary-text">
+                    <p>absolute position</p>
+                </div>
+            </div>
+            </div>
+        </div>
+     </aside>
+    </section>
+
+
+    <!-- position fixed -->
+
+        
+ </section>  <!-- closing position  section -->
+
+ <!-- position right -->
+
+ <div id="right">
+ <section id="color-section" class="container-property"> 
+    <h3 class="h3 fw-bolder">right</h3>
+    <p>Defines the position of the element according to it's 
+        said edge, which is <strong>right</strong>
+    </p>
+</div>
+
+    <!-- right auto -->
+
+    <section class="color-sample"> <!-- parent -->
+        <header class="content-header"> <!--second-->
+            <p class="red"><code class="sample-value" data-tooltip="click to copy"
+                data-clipboard-text="color:#181818">
+                right: auto; </code>
+            </p>
+            <div class="sample-description">
+                <p> The element will remain in it's <strong>default </strong> position. 
+                </p>
+            </div>
+        </header>
+        <aside class="sample-preview">
+            <div class="sample-browser">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+            <div class="sample-output">
+                <div class="position-right-auto">
+                    <p class="main-element">Default Position</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- right pixel -->
+
+    <section class="color-sample"> <!-- parent -->
+        <header class="content-header"> <!--second-->
+            <p class="red"><code class="sample-value" data-tooltip="click to copy"
+                data-clipboard-text="color:#181818">
+                right: 70px; </code>
+            </p>
+            <div class="sample-description">
+                <p> If the element is in <strong>relative</strong> position, it will move 
+                    to the <strong>right</strong> by the right value's specified amount.
+                </p>
+            </div>
+        </header>
+        <aside class="sample-preview">
+            <div class="sample-browser">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+            <div class="sample-output">
+                <div class="position-right-auto">
+                    <div class="main-element-pixel">Actual Position</div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- right negative value -->
+
+    <section class="color-sample"> <!-- parent -->
+        <header class="content-header"> <!--second-->
+            <p class="red"><code class="sample-value" data-tooltip="click to copy"
+                data-clipboard-text="color:#181818">
+                right: -80px; </code>
+            </p>
+            <div class="sample-description">
+                <p> Also you can use <strong>negative value </strong> this will return a 
+                    opposite output.
+                </p>
+            </div>
+        </header>
+        <aside class="sample-preview">
+            <div class="sample-browser">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+            <div class="sample-output">
+                <div class="position-right-auto">
+                    <div class="main-element-negative">Actual Position</div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+</section>  <!-- closing position right  section -->
+
+
+<!-- position left -->
+
+<div id="left">
+<section id="color-section" class="container-property"> 
+    <h3 class="h3 fw-bolder">left</h3>
+    <p>Defines the position of the element according to it's 
+        said edge, which is <strong>left</strong>
+    </p>
+</div>
+
+<!-- left auto -->
+
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            left: auto; </code>
+        </p>
+        <div class="sample-description">
+            <p> Same as <i>right </i>, The element will remain in it's <strong>default </strong> position. 
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-right-auto">
+                <p class="main-element">Default Position</p>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<!-- left pixel -->
+
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            left: 70px; </code>
+        </p>
+        <div class="sample-description">
+            <p> If the element is in <strong>relative</strong> position, it will move 
+            to the <strong>left</strong> by the right value's specified amount.
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-right-auto">
+                <p class="main-element-left-pixel">Actual Position</p>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<!-- left negative pixel -->
+
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            left: -80px; </code>
+        </p>
+        <div class="sample-description">
+            <p>  Also you can use <strong>negative value </strong> this will return a 
+                opposite output.
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-right-auto">
+                <p class="main-element-left-negative">Actual Position</p>
+            </div>
+        </div>
+    </aside>
+</section>
+
+</section>  <!-- closing position left  section -->
+
+<!-- position top section -->
+
+<div id="top">
+<section id="color-section" class="container-property"> 
+    <h3 class="h3 fw-bolder">top</h3>
+    <p>Defines the position of the element according to it's 
+        said edge, which is <strong>top</strong> </br> 
+        Also you can use negative values in <i>top</i> property
+    </p>
+</div>
+
+<!-- top auto -->
+
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            top: auto; </code>
+        </p>
+        <div class="sample-description">
+            <p> Same as <i>right & left </i>, The element will remain in it's <strong>default </strong> position. 
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-right-auto">
+                <p class="main-element">Default Position</p>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<!-- top pixel -->
+
+<section class="color-sample"> <!-- parent -->
+    <header class="content-header"> <!--second-->
+        <p class="red"><code class="sample-value" data-tooltip="click to copy"
+            data-clipboard-text="color:#181818">
+            top: 40px; </code>
+        </p>
+        <div class="sample-description">
+            <p> If the element is in position relative, the element will move <strong>downwards</strong>
+                 by the amount defined by the <strong>top</strong> value. 
+            </p>
+        </div>
+    </header>
+    <aside class="sample-preview">
+        <div class="sample-browser">
+            <i>.</i>
+            <i>.</i>
+            <i>.</i>
+        </div>
+        <div class="sample-output">
+            <div class="position-right-auto">
+                <p class="main-element-top-pixel">Default Position</p>
+            </div>
+        </div>
+    </aside>
+</section>
+
+</section>  <!-- closing position top  section -->
+
+<!-- position bottom section -->
+
+<div id="bottom">
+<section id="color-section" class="container-property"> 
+    <h3 class="h3 fw-bolder">bottom</h3>
+    <p>Defines the position of the element according to it's 
+        said edge, which is <strong>bottom</strong>. </br>Also you can use
+        negative values in <i>bottom</i> property
+    </p>
+</div>
+    <!-- bottom auto -->
+
+    <section class="color-sample"> <!-- parent -->
+        <header class="content-header"> <!--second-->
+            <p class="red"><code class="sample-value" data-tooltip="click to copy"
+                data-clipboard-text="color:#181818">
+                bottom: auto; </code>
+            </p>
+            <div class="sample-description">
+                <p> Same as <i>right, left & top </i>, The element will remain in it's
+                     <strong>default </strong> position. 
+                </p>
+            </div>
+        </header>
+        <aside class="sample-preview">
+            <div class="sample-browser">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+            <div class="sample-output">
+                <div class="position-right-auto">
+                    <p class="main-element">Default Position</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- bottom pixel -->
+
+    <section class="color-sample"> <!-- parent -->
+        <header class="content-header"> <!--second-->
+            <p class="red"><code class="sample-value" data-tooltip="click to copy"
+                data-clipboard-text="color:#181818">
+                bottom: 10px; </code>
+            </p>
+            <div class="sample-description">
+                <p> If the element is in position relative, the element will move <strong>upwards</strong>
+                    by the amount defined by the <strong>bottom </strong> value. 
+                </p>
+            </div>
+        </header>
+        <aside class="sample-preview">
+            <div class="sample-browser">
+                <i>.</i>
+                <i>.</i>
+                <i>.</i>
+            </div>
+            <div class="sample-output">
+                <div class="position-right-auto">
+                    <p class="main-element-bottom-pixel">Default Position</p>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+</section>  <!-- closing position bottom  section -->
+
+
+<div class="container">
+    <footer class="py-1 my-2">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2022 Credits to W3schools.com, css-tricks.com & cssrefrence.io</p>
+    </footer>
+</div>
+    
+                 <script>
+                    function openNav() {
+                        document.getElementById("mySidebar").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                    }
+                            
+                    function closeNav() {
+                        document.getElementById("mySidebar").style.width = "0";
+                        document.getElementById("main").style.marginLeft= "0";
+                    }
+                </script>
+            </body>
+            </html>    
